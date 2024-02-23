@@ -20,7 +20,7 @@ const listen = onAuthStateChanged(auth, (user)=>
     }, []) //dependency array
   return (
     <div>
-      {authUser ? <p>Signed In </p> : <p>Signed Out</p> } 
+      {authUser ? <p>{`Signed In as ${authUser.email}`} </p> : <p>Signed Out</p> } 
       {/* conditional operators  */}
     </div>
   )
