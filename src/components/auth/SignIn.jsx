@@ -6,8 +6,16 @@ const SignIn = () => {
   return (
     <div className='sign-in'>
        <form >
-<input type="email" placeholder='Enter your Email' value={email} />
-<input type="password" placeholder='Enter your Password' value={password} />
+<input type="email" placeholder='Enter your Email' value={email} 
+onChange={(e)=>
+setEmail(e.target.value)
+}
+/>
+<input type="password" placeholder='Enter your Password' value={password} 
+onChange={(e)=>
+    setPassword(e.target.value)
+    }
+/>
 
        </form>
     </div>
