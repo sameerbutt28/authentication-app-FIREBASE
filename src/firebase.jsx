@@ -11,7 +11,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyBOuc4-OUCPmTVnc15Uu18bZtsC20ncQDI",
   authDomain: "auhentication-app-a896e.firebaseapp.com",
-  projectId: "auhentication-app-a896e",
+  projectId: "auhentication-app-a896e", 
   storageBucket: "auhentication-app-a896e.appspot.com",
   messagingSenderId: "1037162023200",
   appId: "1:1037162023200:web:5d8fa67ce2b154fe49af45",
