@@ -1,4 +1,4 @@
-import { onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged, signOut} from 'firebase/auth';
 import React, {useState, useEffect} from 'react'
 import { auth } from '../firebase';
 
@@ -17,10 +17,28 @@ const listen = onAuthStateChanged(auth, (user)=>
         setAuthUser(null);
     }
 } )//this user is used to check weather it exist or not
-    }, []) //dependency array
-  return (
+return ()=>
+{
+    listen();   
+}   
+}, []) //dependency array
+const userSignOut = ()=>
+{
+signOut(auth).then(()=>
+{
+    console.log('signout is successfull.')
+}).catch((error)=>
+{
+    console.log(error);
+})
+}
+return (
     <div>
-      {authUser ? <p>{`Signed In as ${authUser.email}`} </p> : <p>Signed Out</p> } 
+      {authUser ? 
+      <>
+      <p>{`Signed In as ${authUser.email}`} </p> <button onClick={userSignOut}>Sign Out</button></>: <p>Signed Out</p> 
+      
+      } 
       {/* conditional operators  */}
     </div>
   )
