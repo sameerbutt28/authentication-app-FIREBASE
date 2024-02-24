@@ -21,7 +21,7 @@ const firebaseConfig = {
 //database code
 function writeUserData(userId, name, email, imageUrl) {
   const db = getDatabase(); //not to call getdata base function mulliple times we make a vatiable of it.
-  const reference = ref(db, "users/" + userId); // we ahve to add users so db and passing the path.
+  const reference = ref(db, "users/" + userId); // we have to add users so db and passing the path.
   // Initialize Firebase
 
   set(reference, {
