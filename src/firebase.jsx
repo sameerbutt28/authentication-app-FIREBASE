@@ -5,7 +5,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDatabase, ref, set } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-                 
+                     
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -18,7 +18,7 @@ const firebaseConfig = {
   appId: "1:1037162023200:web:5d8fa67ce2b154fe49af45",
   measurementId: "G-T43D1W3XVJ"
 };
-
+   
 //database code
 function writeUserData(userId, name, email, imageUrl) {
   const db = getDatabase(); //not to call getdata base function mulliple times we make a vatiable of it.
