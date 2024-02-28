@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { getDatabase, ref, set } from "firebase/database";
+// import { getDatabase, ref, set } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
                   
@@ -20,18 +20,18 @@ const firebaseConfig = {
 };
    
 //database code
-function writeUserData(userId, name, email, imageUrl) {
-  const db = getDatabase(); //not to call getdata base function mulliple times we make a vatiable of it.
-  const reference = ref(db, "users/" + userId); // we have to add users so db and passing the path.
-  // Initialize Firebase
+// function writeUserData(userId, name, email, imageUrl) {
+//   const db = getDatabase(); //not to call getdata base function mulliple times we make a vatiable of it.
+//   const reference = ref(db, "users/" + userId); // we have to add users so db and passing the path.
+//   // Initialize Firebase
  
-  set(reference, {
-    username: name,
-    email: email,
-    profile_picture: imageUrl,
-  });
-}
-writeUserData("sammy28", "sameer", "buttjee@gmail.com", "myImageUrl");
+//   set(reference, {
+//     username: name,
+//     email: email,
+//     profile_picture: imageUrl,
+//   });
+// }
+// writeUserData("sammy28", "sameer", "buttjee@gmail.com", "myImageUrl");
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
